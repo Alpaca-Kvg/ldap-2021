@@ -1,0 +1,6 @@
+#exemple modificacion 
+#
+#
+
+dn: cn=Pau Pou,ou=usuaris,dc=edt,dc=org
+changetype: modify
