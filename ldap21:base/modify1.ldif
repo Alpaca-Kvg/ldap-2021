@@ -1,6 +1,34 @@
-#exemple modificacion 
-#
-#
-
+# exemple modificacion 
+# ldapmodify -x -h 172.17.0.2 -D 'cn=Manager,dc=edt,dc=org' -w secret -f modify1.ldif 
+# deleteoldrnd: 0 = false 1 = true
+#modificar interactivamente 
+ ldapmodrdn -x -h 172.17.0.2 -D 'cn=Manager,dc=edt,dc=org' -w secret 'cn=Pau Pou,ou=usuaris,dc=edt,dc=org' 'cn=Pauet Pou'	con la opcion -r elimina antiguo cn
+ 
 dn: cn=Pau Pou,ou=usuaris,dc=edt,dc=org
 changetype: modify
+add: homephone
+homephone: 555-888-123
+-
+replace: mail
+mail: paupou@edt.org
+-
+delete: description
+
+dn: cn=Anna Pou,ou=usuaris,dc=edt,dc=org 
+changetype: delete
+
+dn: cn=Pere Pou,ou=usuaris,dc=edt,dc=org
+changetype: modify
+replace: sn
+sn: perico
+-
+delete: homephone
+-
+add: description
+description: els pericos aquest any a la champions
+
+dn: cn=Perico Pou,ou=usuaris,dc=edt,dc=org
+changetype: modrdn
+newrdn: cn=Pererico Pou
+deleteoldrdn: 1
+  
