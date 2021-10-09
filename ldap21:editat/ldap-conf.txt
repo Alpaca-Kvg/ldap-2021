@@ -1,0 +1,3 @@
+
+BASE dc=edt,dc=org
+URI ldap://ldap.edt.org
