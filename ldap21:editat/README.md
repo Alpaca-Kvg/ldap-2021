@@ -12,7 +12,6 @@ ASIX M06-ASO Escola del treball de barcelona
 + Dockerfile
 + install.sh
 + Fichero para configurar /etc/ldap/ldap.conf
-+ 
 
 * **alpacakvg/ldap21:editat** Servidor LDAP editat amb la base de dades edt.org
 
