@@ -13,32 +13,19 @@ ASIX M06-ASO Escola del treball de barcelona
 + install.sh
 + Fichero para configurar /etc/ldap/ldap.conf
 
-* **alpacakvg/ldap21:editat** Servidor LDAP editat amb la base de dades edt.org 
+* **alpacakvg/ldap21:schema** Servidor LDAP editat amb la base de dades edt.org 
   
   S'ha fet el següent:
 
-	* generar un sol fitxer ldif anomenat edt.org.ldif
+	* futbolistaA.schema Derivar de inetOrgPerson, structural, injectat dades de data-futbolA.ldif
 
-	* afegir en el fitxer dos usuaris i una ou nova inventada.
-
- 	* modificar el fitxer edt.org.ldif  modificant dn dels usuaris utilitzant en lloc del cn el uid per identificar-los. 
-
-	* configurar el password de Manager que sigui ‘secret’ però encriptat (posar-hi un comentari per indicar quin és de cara a estudiar).
-
-	* afegr el fitxer de configuració client.
-
-	* propagar el port amb -P  -p
 
 ```
-docker network create hisx2
 
-docker build -t alpacakvg/ldap21:editat .
+docker run --rm --name ldap.edt.org -h ldap.edt.org -p389:389 --net hisx2 -it alpacakvg/ldap21:schema /bin/bash
 
-docker run --rm --name ldap.edt.org -h ldap.edt.org -p389:389 --net hisx2 -d alpacakvg/ldap21:editat
+docker run --rm --name phpldapadmin.edt.org -h phpldapadmin.edt.org --network 2hisx -p 80:80 -d edtasixm06/phpldapadmin:20
 
-docker ps
-
-ldapsearch -x -LLL 
 ``` 
 
 

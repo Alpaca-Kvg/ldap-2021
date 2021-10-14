@@ -10,7 +10,8 @@ slapadd -F /etc/ldap/slapd.d -l /opt/docker/edt.org.ldif
 cat /opt/docker/ldap-conf.txt >> /etc/ldap/ldap.conf
 
 chown -R openldap.openldap /etc/ldap/slapd.d /var/lib/ldap
-/usr/sbin/slapd -d0
+/usr/sbin/slapd 
+slapcat
 
 
 # Pendent:
