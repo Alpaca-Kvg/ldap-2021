@@ -1,0 +1,65 @@
+dn: ou=macacos,dc=edt,dc=org
+ou: macacos
+description: Container per macacos
+objectClass: organizationalunit
+
+dn: cn=macaco navajero,ou=macacos,dc=edt,dc=org
+objectClass: x-macaco
+objectClass: x-animal
+cn: macaco navajero
+sn: el navajas
+x-raza: macaco
+x-foto:<file:/opt/docker/macaco-navaja.jpeg
+x-documento:<file:/opt/docker/pdf.pdf
+x-grito:<file:/opt/docker/grito1.mp3
+
+dn: cn=macaco cani,ou=macacos,dc=edt,dc=org
+objectClass: x-macaco
+objectClass: x-animal
+cn: macaco cani 
+sn: er XhuLo
+x-raza: macaco
+x-foto:<file:/opt/docker/macaco-cani-de-12-años.png
+x-documento:<file:/opt/docker/pdf.pdf
+x-grito:<file:/opt/docker/grito1.mp3
+
+dn: cn=macaco durmiente,ou=macacos,dc=edt,dc=org
+objectClass: x-macaco
+objectClass: x-animal
+x-raza: macaco
+cn: macaco durmiente
+sn: la bella bestia durmiente
+x-foto:<file:/opt/docker/macaco-durmiendo.jpg
+x-documento:<file:/opt/docker/pdf.pdf
+x-grito:<file:/opt/docker/grito1.mp3
+
+dn: cn=macaco español,ou=macacos,dc=edt,dc=org
+objectClass: x-macaco
+objectClass: x-animal
+cn: macaco español
+sn: Gibaltrar ESPAÑOL
+x-raza: macaco
+x-foto:<file:/opt/docker/macaco-español.jpg
+x-documento:<file:/opt/docker/pdf.pdf
+x-grito:<file:/opt/docker/grito1.mp3
+
+dn: cn=macaco ligon,ou=macacos,dc=edt,dc=org
+objectClass: x-macaco
+objectClass: x-animal
+cn: macaco ligon
+sn: el ligon
+x-raza: macaco
+x-foto:<file:/opt/docker/macaco-pichabrava.jpeg
+x-documento:<file:/opt/docker/pdf.pdf
+x-grito:<file:/opt/docker/grito1.mp3
+
+dn: cn=macaco sr7,ou=macacos,dc=edt,dc=org
+objectClass: x-macaco
+objectClass: x-animal
+cn: macaco sr7
+sn: cortesito sr7 
+x-raza: macaco
+x-foto:<file:/opt/docker/macaco-sr7.jpg
+x-documento:<file:/opt/docker/pdf.pdf
+x-grito:<file:/opt/docker/grito1.mp3
+

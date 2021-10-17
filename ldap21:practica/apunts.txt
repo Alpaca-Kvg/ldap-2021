@@ -1,0 +1,3 @@
+container phpadmin 
+
+ docker run --rm --name phpldapadmin.edt.org -h phpldapadmin.edt.org --network 2hisx -p 80:80 -d edtasixm06/phpldapadmin:20
