@@ -8,7 +8,9 @@ objectClass: x-macaco
 objectClass: x-animal
 cn: macaco navajero
 sn: el navajas
+x-descripcion: Macaco navajero del barrio, suele ir con riñonera y ropa fila
 x-raza: macaco
+x-localidad: el raval
 x-foto:<file:/opt/docker/macaco-navaja.jpeg
 x-documento:<file:/opt/docker/pdf.pdf
 x-grito:<file:/opt/docker/grito1.mp3
@@ -17,7 +19,7 @@ dn: cn=macaco cani,ou=macacos,dc=edt,dc=org
 objectClass: x-macaco
 objectClass: x-animal
 cn: macaco cani 
-sn: er XhuLo
+sn: er XhuLo 
 x-raza: macaco
 x-foto:<file:/opt/docker/macaco-cani-de-12-años.png
 x-documento:<file:/opt/docker/pdf.pdf
@@ -29,6 +31,8 @@ objectClass: x-animal
 x-raza: macaco
 cn: macaco durmiente
 sn: la bella bestia durmiente
+x-descripcion: el macaco durmiente que espera a su principe
+x-localidad: Murcia
 x-foto:<file:/opt/docker/macaco-durmiendo.jpg
 x-documento:<file:/opt/docker/pdf.pdf
 x-grito:<file:/opt/docker/grito1.mp3
@@ -39,6 +43,8 @@ objectClass: x-animal
 cn: macaco español
 sn: Gibaltrar ESPAÑOL
 x-raza: macaco
+x-descripcion: GIBRALTAR ESPAÑOL
+x-localidad: Gibraltar,España
 x-foto:<file:/opt/docker/macaco-español.jpg
 x-documento:<file:/opt/docker/pdf.pdf
 x-grito:<file:/opt/docker/grito1.mp3
@@ -48,6 +54,7 @@ objectClass: x-macaco
 objectClass: x-animal
 cn: macaco ligon
 sn: el ligon
+x-descripcion: Folla mas que toda la clase junta
 x-raza: macaco
 x-foto:<file:/opt/docker/macaco-pichabrava.jpeg
 x-documento:<file:/opt/docker/pdf.pdf
@@ -58,6 +65,8 @@ objectClass: x-macaco
 objectClass: x-animal
 cn: macaco sr7
 sn: cortesito sr7 
+x-descripcion: SUUUUUUUUUUUUU
+x-localidad: Manchester
 x-raza: macaco
 x-foto:<file:/opt/docker/macaco-sr7.jpg
 x-documento:<file:/opt/docker/pdf.pdf
