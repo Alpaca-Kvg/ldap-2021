@@ -12,12 +12,14 @@ ASIX M06-ASO Escola del treball de barcelona
 + Dockerfile
 + install.sh
 + Fichero para configurar /etc/ldap/ldap.conf
++ Ficheros para los usuarios macacos
 
-* **alpacakvg/ldap21:schema** Servidor LDAP editat amb la base de dades edt.org 
+* **alpacakvg/ldap21:practica** Servidor LDAP editat amb la base de dades edt.org 
   
   S'ha fet el següent:
 
-	* futbolistaA.schema Derivar de inetOrgPerson, structural, injectat dades de data-futbolA.ldif
+	* prova.schema con objectclass derivado de inetOrgPerson, structural y objectclass SUP TOP auxiliary.
+	* injectar dades de data-macacos.ldif
 
 
 ```

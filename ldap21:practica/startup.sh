@@ -7,6 +7,7 @@ rm -rf /etc/ldap/slapd.d/*
 rm -rf /var/lib/ldap/*
 slaptest -f /opt/docker/slapd.conf -F /etc/ldap/slapd.d
 slapadd -F /etc/ldap/slapd.d -l /opt/docker/edt.org.ldif
+slapadd -F /etc/ldap/slapd.d -l /opt/docker/data-macaco.ldif
 cat /opt/docker/ldap-conf.txt >> /etc/ldap/ldap.conf
 
 chown -R openldap.openldap /etc/ldap/slapd.d /var/lib/ldap
