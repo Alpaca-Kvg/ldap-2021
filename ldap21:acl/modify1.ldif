@@ -1,0 +1,10 @@
+#fichero para modificar acl: to by self write by * read
+dn: uid=pere,ou=usuaris,dc=edt,dc=org
+changetype: modify
+delete: mail
+
+dn: uid=anna,ou=usuaris,dc=edt,dc=org
+changetype: modify
+delete: mail
+
+

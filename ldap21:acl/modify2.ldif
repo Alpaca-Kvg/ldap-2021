@@ -1,0 +1,22 @@
+#modify para acl: to attrs=userPassword by self write by * auth
+# to * by * read
+#ldapmodify -D 'uid=pere,ou=usuaris,dc=edt,dc=org' -w pere -f modify2.ldif -cv
+dn: uid=pere,ou=usuaris,dc=edt,dc=org
+changetype: modify
+replace: userPassword
+userPassword: pepe
+-
+replace: mail
+mail: pepito@grillo.edt
+
+dn: uid=anna,ou=usuaris,dc=edt,dc=org
+changetype: modify
+replace: mail
+mail: anna@edt.org
+
+dn: uid=anna,ou=usuaris,dc=edt,dc=org
+changetype: modify
+replace: userPassword
+userPassword: annita
+
+
