@@ -1,12 +1,12 @@
-# LDAP @isx25633105 ASIX
+# LDAP @Alpaca-Kvg ASIX
 # Curs 2021-2022
 
-* **isx25633105/ldap21:acl** Servidor LDAP amb la base de dades edt.org
+**alpacakvg/ldap21:acl** Servidor LDAP amb la base de dades edt.org
 
 ```
 docker network create 2hisx
-docker build -t isx25633105/ldap21:acl
-docker run --rm --name ldap.edt.org -h ldap.edt.org --net 2hisx -p 389:389 -it isx25633105/ldap21:acl /bin/bash 
+docker build -t alpacakvg/ldap21:acl
+docker run --rm --name ldap.edt.org -h ldap.edt.org --net 2hisx -p 389:389 -it alpacakvg/ldap21:acl /bin/bash 
 
 slapcat -n0
 ldapsearch -x -h localhost -LLL -D 'cn=Sysadmin,cn=config' -w syskey -b 'cn=config'
