@@ -1,44 +1,18 @@
-# LDAP Server
-## @edt ASIX M06-ASO 2021-2022
-### Servidor LDAP (Debian 11)
+# LDAP @isx25633105 ASIX
+# Curs 2021-2022
 
-Podeu trobar les imatges docker al Dockehub de [alpacakvg](https://hub.docker.com/u/alpacakvg/)
-
-ASIX M06-ASO Escola del treball de barcelona
-
-### Contenido
-
-+ Fichero ldif con toda la base edt junta + añadidos
-+ Dockerfile
-+ install.sh
-+ Fichero para configurar /etc/ldap/ldap.conf
-
-* **alpacakvg/ldap21:editat** Servidor LDAP editat amb la base de dades edt.org 
-  
-  S'ha fet el següent:
-
-	* generar un sol fitxer ldif anomenat edt.org.ldif
-
-	* afegir en el fitxer dos usuaris i una ou nova inventada.
-
- 	* modificar el fitxer edt.org.ldif  modificant dn dels usuaris utilitzant en lloc del cn el uid per identificar-los. 
-
-	* configurar el password de Manager que sigui ‘secret’ però encriptat (posar-hi un comentari per indicar quin és de cara a estudiar).
-
-	* afegr el fitxer de configuració client.
-
-	* propagar el port amb -P  -p
-
+* **isx25633105/ldap21:group** Servidor LDAP amb la base de dades edt.org
+ S'ha fet el següent:
+ * Modificar el fitxer edt.org.ldif per afegir una ou grups.
+ * S'han definit els següents grups:
+   alumnes(600), professors(601), 1asix(610), 2asix(611), wheel(10),
+   1wiam(612), 2wiam(613), 1hiaw(614).
 ```
-docker network create hisx2
+docker network create 2hisx
+docker build -t isx25633105/ldap21:group .
+docker run --rm --name ldap.edt.org -h ldap.edt.org --net 2hisx -p 389:389 -d isx25633105/ldap21:group 
 
-docker build -t alpacakvg/ldap21:editat .
-
-docker run --rm --name ldap.edt.org -h ldap.edt.org -p389:389 --net hisx2 -d alpacakvg/ldap21:editat
-
-docker ps
-
-ldapsearch -x -LLL 
-``` 
-
+docker run --rm --name phpldapadmin.edt.org -h phpldapadmin.edt.org --net 2hisx -p 80:80 -d edtasixm06/phpldapadmin:20
+```
+ 
 
